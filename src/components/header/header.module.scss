@@ -1,0 +1,19 @@
+.root {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  min-width: 360px;
+  padding: 10px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  min-width: auto;
+  gap: 10px;
+}
+.nav_link {
+  color: white;
+  text-decoration:none;
+}
