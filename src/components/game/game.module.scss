@@ -65,3 +65,89 @@
 .reset-button:hover {
   background-color: #1976d2;
 }
+
+.card_back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(8px); /* Apply the blur effect */
+    z-index: 1; /* Adjust the z-index as needed */
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+  }
+  
+  .form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    min-width: 250px;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  
+  .exit_form{
+    display: flex;
+    align-items: center;
+  }
+  
+  .exit_form_button{
+    position: relative;
+    left: 70%;
+  }
+  
+  .card{
+    background-color: black;
+    align-items: center;
+    width: 30vw;
+    min-width: 250px;
+    border-radius: 30px;
+    padding: 10px;
+  }
+  
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 40%;
+    font-size: 2em;
+    }
+  table button {
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-family: Monaco, monospace;
+    border-radius: 10px;
+    height: 60px;
+    border: 0px;
+    box-shadow: 2.83px 2.83px 2px rgba(56, 41, 41, 0.75);
+  &:active {
+    position: relative;
+    top: 5px;
+    left: 5px;
+  }
+  }
+  table button:hover {
+    opacity: 0.4;
+  }
+
+  th {
+    background-color: #7e0c0c;
+    color: white;
+    text-align: center;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  tr {
+    background-color: white;
+  }
