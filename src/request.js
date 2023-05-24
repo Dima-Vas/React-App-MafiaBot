@@ -16,7 +16,7 @@ function makeRequest(method, url, data = null) {
         });
 }
 
-const url = 'https://shimmer-mint-laborer.glitch.me/test/';
+const url = 'http://shimmer-mint-laborer.glitch.me/test/';
 
 /* 
     Get an array of all the players existing

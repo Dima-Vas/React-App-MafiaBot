@@ -1,7 +1,7 @@
-POST https://shimmer-mint-laborer.glitch.me/test/
-Content-Type: application/json
+GET https://shimmer-mint-laborer.glitch.me/test/
+# Content-Type: application/json
 
-{
-    "nickname" : "Dimas",
-    "password" : "pswd"
-}
+# {
+#     "nickname" : "Dimas",
+#     "password" : "pswd"
+# }

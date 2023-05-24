@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 2em;
+    }
+  table button {
+    width: 90%;
+    background-color: white;
+    color: black;
+    font-family: Monaco, monospace;
+    border-radius: 10px;
+    height: 60px;
+    border: 0px;
+    box-shadow: 2.83px 2.83px 2px rgba(56, 41, 41, 0.75);
+  &:active {
+    position: relative;
+    top: 5px;
+    left: 5px;
+  }
+  }
+  table button:hover {
+    opacity: 0.4;
+  }
+
+  th {
+    background-color: #7e0c0c;
+    color: white;
+    text-align: center;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  tr:nth-child(even) {
+    background-color: white;
+    margin: 0 10px;
+  }
+  tr {
+    border: 1px black solid;
+   
+  }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+            <th>Alive</th>
+            <th>Kill</th>
+            <th>Show Role</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr key={index}>
+                    <td>{name}</td>
+                    <td>
+                    <button> handleButton1Click(index)>Elliminate</button>
+                    </td>
+                    <td>
+                    <button> handleButton2Click(name)>Show Role</button>
+                    </td>
+                </tr>
+                <tr key={index}>
+                    <td>{name}</td>
+                    <td>
+                    <button> handleButton1Click(index)>Elliminate</button>
+                    </td>
+                    <td>
+                    <button> handleButton2Click(name)>Show Role</button>
+                    </td>
+                </tr>
+                <tr key={index}>
+                    <td>{name}</td>
+                    <td>
+                    <button> handleButton1Click(index)>Elliminate</button>
+                    </td>
+                    <td>
+                    <button> handleButton2Click(name)>Show Role</button>
+                    </td>
+                </tr>
+        </tbody>
+        </table>
+</body>
+</html>
