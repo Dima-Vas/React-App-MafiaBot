@@ -15,7 +15,6 @@ export const LoginForm = ({ className, onClose, playerNumber, playerRole, addNam
         nickname: "",
         password: "",
     });
-
     const [nickname, setNickname] = useState("")
     const [password, setPassword] = useState("")
     const [nicknameError, setNicknameError] = useState("");
@@ -24,7 +23,6 @@ export const LoginForm = ({ className, onClose, playerNumber, playerRole, addNam
     const [mafiaCard, setMafiaCard] = useState(false);
     const [donCard, setDonCard] = useState(false);
     const [townieCard, setTownieCard] = useState(false);
-
     const handleSubmit = (event) => {
       event.preventDefault();
       setNicknameError('');
@@ -69,7 +67,6 @@ export const LoginForm = ({ className, onClose, playerNumber, playerRole, addNam
         setPasswordError('Pasword must have a length between 1 and 20 characters.');
       }
     };
-
     return (
       <div className={classNames(styles.root, className)}>
       {sheriffCard && (

@@ -11,7 +11,7 @@ export interface LeaderBoardProps {
 export const LeaderBoard = ({ className }: LeaderBoardProps) => {
   const [usersExisting, setUsersExisting] = useState([]);
   useEffect(() => {
-    getAllPlayers().then((users : any) => {
+    getAllPlayers().then((users: any) => {
       setUsersExisting(users);
     });
   }, []);
@@ -40,7 +40,6 @@ export const LeaderBoard = ({ className }: LeaderBoardProps) => {
     delete filteredItem.__v;
     return filteredItem;
   };
-
   return (
     <div className={classNames(styles.root, className)}>
       <div className={styles["table"]}>
@@ -61,9 +60,9 @@ export const LeaderBoard = ({ className }: LeaderBoardProps) => {
                 </a>
               </div>
             ))}
-            {usersExisting.length == 0 && (
-              <h1>The data is being fetched....</h1>
-            )}
+          {usersExisting.length == 0 && (
+            <h1>The data is being fetched....</h1>
+          )}
         </div>
         <div className={styles["table-content"]}>
           {usersExisting.map((item: any) => (

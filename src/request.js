@@ -6,7 +6,6 @@ function makeRequest(method, url, data = null) {
         },
         body: data ? JSON.stringify(data) : null
     };
-
     return fetch(url, requestOptions)
         .then(response => {
             if (!response.ok) {
@@ -15,12 +14,7 @@ function makeRequest(method, url, data = null) {
             return response.json();
         });
 }
-
 const url = 'http://shimmer-mint-laborer.glitch.me/test/';
-
-/* 
-    Get an array of all the players existing
-*/
 async function getAllPlayers () {
     try {
       const resp = await makeRequest('GET', url);
@@ -30,9 +24,6 @@ async function getAllPlayers () {
       throw error;
     }
   }
-/* 
-    Get the player by their name
-*/
 async function getProperPlayer (name) {
     try {
         const resp = await makeRequest('GET', url+name);
@@ -42,11 +33,6 @@ async function getProperPlayer (name) {
         console.error('GET Error:', error);
     }
 }
-/*
-    Post player with "postData" attributes
-    NOTE : postData = {"nickname" : "nicknameInserted", "password" : "pswdInserted"}
-    No other arguments are processed
-*/
 async function postPlayer (postData) {
     try {
         const resp = await makeRequest('POST', url, postData);
@@ -56,9 +42,6 @@ async function postPlayer (postData) {
         console.error('POST Error:', error);
     }
 }
-/* 
-    Delete the player by their id
-*/
 async function deletePlayer (id) {
     try {
         const resp = await makeRequest('DELETE', url+id);
@@ -68,20 +51,6 @@ async function deletePlayer (id) {
         console.error('DELETE Error:', error);
     }
 }
-
-/* Change the existing player's data
-NOTE : In PATCH (a.k.a UPDATE) request,
-patchData = {
-    "nickname" : "newNickname" (string, changes prev nickname to given, optional)
-
-    "gamePlayed" : true (boolean, tells if you either need to change the player's statistics
-                            and increment the amount of games played or not, mandatory)
-
-    "gameWon" : true (boolean, tells to increment the amount of games won, mandatory if "gamePlayed" is true)
-
-    "gameWonAsMafia" : true (boolean, set true if player was playing as mafia during the round he won, mandatory if "gameWon" is true)
-}
-*/
 async function patchPlayer (id, patchData) {
     try {
         const resp = await makeRequest('PATCH', url+id, patchData);
@@ -92,5 +61,4 @@ async function patchPlayer (id, patchData) {
         return null
     }
 }
-
 export {getAllPlayers, getProperPlayer, postPlayer, deletePlayer, patchPlayer}
